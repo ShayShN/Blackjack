@@ -1,6 +1,6 @@
-from deck import build_standard_deck,shuffle_by_suit
+from deck import build_standard_deck,shuffle_by_suit, temp, arr
 from logic_game import  run_full_game
-from deck import temp, arr
+ 
 
 player = {"hand": [ ] }
 dealer = {"hand": [ ] }

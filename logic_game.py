@@ -21,7 +21,7 @@ def dealer_play(deck: list[dict], dealer: dict) -> bool:
     while calculate_hand_value(dealer["hand"]) <= 17:
         dealer["hand"].append(deck.pop())
         if calculate_hand_value(dealer["hand"]) > 21:
-            return f'oops! {False}'
+            return f'oops the dealer busterd! {False}'
         if calculate_hand_value(dealer["hand"]) > 17 or calculate_hand_value(dealer["hand"]) <= 21:
             return True
         
@@ -38,7 +38,7 @@ def run_full_game(deck: list[dict], player: dict, dealer: dict) -> None:
                 return f"your sum: {user_sum}\n you are lost!!!"
             else:
                 player["hand"].append(deck.pop())
-                continue
+                print(user_sum)
         if user_choice == "S":
             dealer_turn = dealer_play(deck, dealer)
             if dealer_turn == True:
