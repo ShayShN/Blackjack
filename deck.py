@@ -26,7 +26,7 @@ def build_standard_deck() -> list[dict]:
 
 def shuffle_by_suit(deck: list[dict], swaps: int = 5000) -> list[dict]:
     swaps = swaps
-    while swaps >= 0:
+    while swaps > 0:
         index1 = random.randint(0, 51)
         index2 = random.randint(0, 51)
         if index1 == index2:
